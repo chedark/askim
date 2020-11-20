@@ -1,24 +1,76 @@
-music_name = "music.mp3"
+music_song = ["music1.mp3","music.mp3"];
+music_name = ["Dynamite","Life Is Good"];
+music_picture = ["https://dbkpop.com/wp-content/uploads/2020/08/bts_dynamite_teaser_jungkook.jpg","https://64.media.tumblr.com/24187c34b4ff7edbbf632068cb1bfb5c/fbc8aa9bfb3d5ecf-10/s1280x1920/71a22924d431d6a2e145544cc5771d80cdceced2.jpg"]
 let play_btn = document.querySelector("#play");
 let prev_btn = document.querySelector("#pre");
 let next_btn = document.querySelector("#next");
+let number_btr = document.querySelector("#letter");
 let range = document.querySelector("#range");
 let play_img = document.querySelector("#play_img")
+let name_btn = document.querySelector("#Songname")
+let picture_btn = document.querySelector("#picture")
 let total_time = 0;
 let currentTime = 0;
 let isPlaying = false;
 let song = new Audio();
+let number =0;
 window.onload = playSong;
 
-
-
 function playSong(){
-    song.src = music_name;
-    console.log(song)
+name_btn.innerHTML =music_name[number];
+picture_btn.src= music_picture[number];
+
+  prev_btn.addEventListener('click',function(){
+    if(number<music_song.length && number>0){
 
 
+        --number;
+        name_btn.innerHTML =music_name[number];
+        song.pause();
+        isPlaying = false;
+        play_img.src = "play.png";
+        picture_btn.src= music_picture[number];
+
+
+    }else{
+
+            ++number;
+            name_btn.innerHTML =music_name[number];
+            song.pause();
+            isPlaying = false;
+            play_img.src = "play.png";
+            picture_btn.src= music_picture[number];
+
+    }})
+
+  next_btn.addEventListener('click',function(){
+      if(number<music_name.length-1){
+
+
+          ++number;
+          name_btn.innerHTML =music_name[number];
+          song.pause();
+          isPlaying = false;
+          play_img.src = "play.png";
+          picture_btn.src= music_picture[number];
+
+
+      }else{
+
+              --number;
+              name_btn.innerHTML =music_name[number];
+              song.pause();
+              isPlaying = false;
+              play_img.src = "play.png";
+              picture_btn.src= music_picture[number];
+
+      }})
     play_btn.addEventListener('click',function(){
+      song.src = music_song[number];
+      console.log(song)
+
         if(!isPlaying){
+
             song.play();
             isPlaying = true;
             total_time = song.duration;

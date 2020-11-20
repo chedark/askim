@@ -8,6 +8,19 @@
 body{
     background-color: white;
 }
+.letter
+{
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: left;
+  top: 5%;
+  left: 5%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
 .container{
     position: fixed;
     left: 10%;
