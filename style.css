@@ -6,15 +6,17 @@
     outline: 0;
 }
 body{
-    background-color: #E1E6EC;
+    background-color: white;
 }
 .container{
-    position: absolute;
-    left: 20%;
-    top: 50%;
+    position: fixed;
+    left: 10%;
+    top: 30%;
     transform: translate(-50%,-50%);
     padding: 6px;
     width: 300px;
+     display: inline-block;
+    margin-left: 0%;
     border-radius: 8px;
     background-color: #E1E6EC;
     box-shadow: 5px 5px 11px green , -5px -5px 11px  #fff  ;
@@ -104,7 +106,7 @@ z-index: 1;
   z-index: 2;
 }
 #large-header {
- background-color: #242d31;
+ background-color: #24292d;
 
 }
 .main-title {

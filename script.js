@@ -10,6 +10,8 @@ let isPlaying = false;
 let song = new Audio();
 window.onload = playSong;
 
+
+
 function playSong(){
     song.src = music_name;
     console.log(song)
