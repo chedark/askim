@@ -10,6 +10,7 @@ body{
 }
 .letter
 {
+  font-size: 100px;
   position: absolute;
   z-index: 1;
   margin: 0;
@@ -17,7 +18,7 @@ body{
   color: #f9f1e9;
   text-align: left;
   top: 5%;
-  left: 5%;
+  left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
 }
