@@ -8,8 +8,39 @@
 body{
     background-color: white;
 }
+nav {
+    border-bottom: 1px solid black;
+
+    z-index: 1;
+
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+    z-index: 1;
+
+}
+
+.crumb {
+    display: inline-block;
+    z-index: 1;
+
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 100%;
+    font-weight: bold;
+    padding: 0 3px;
+    z-index: 1;
+}
+
 .letter
 {
+
   font-size: 100px;
   position: absolute;
   z-index: 1;
@@ -24,8 +55,8 @@ body{
 }
 .container{
     position: fixed;
-    left: 10%;
-    top: 30%;
+    left: 90%;
+    top: 50%;
     transform: translate(-50%,-50%);
     padding: 6px;
     width: 300px;
@@ -148,4 +179,38 @@ z-index: 1;
   .demo-1 .main-title {
     font-size: 3em;
   }
+}
+.tittel{
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  color: #f9f1e9;
+  text-align: left;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+}
+.containerText
+{
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  top: 10%;
+  left: 5%;
+  text-align: left;
+  color: white;
+  max-width: 300px;
+}
+.profile
+{
+    top: 80%;
+    width:300px;
+    height:300px;
+    border-radius: 8px;
+    background-color: #E1E6EC;
+    box-shadow: 5px 5px 11px green , -5px -5px
 }
